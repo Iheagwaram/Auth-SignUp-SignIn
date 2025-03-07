@@ -13,7 +13,7 @@ const signUpController = async (req, res) => {
         res.status(500).json({ message: error.message, data: [], status: false });
     }
 };
-const signInController = async (userObj) => {
+const signInController = async (req, res) => {
     try {
         const userObj = req.body;
         const userData = await signIn(userObj);
